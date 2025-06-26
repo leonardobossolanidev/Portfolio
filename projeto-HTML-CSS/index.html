@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifolio Leonardo Bossolani</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Leonardo Bossolani</h1>
+            <h2>Desenvolvedor Back-end & Analista de Dados</h2>
+            <nav>
+                <a href="#sobre">Sobre</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="container">
+            <h1>Bem-vindo ao meu portfólio!</h1>
+            <p>Desenvolvendo habilidades de <span class="destaque">FullStack</span> com foco em <span class="destaque">Back-end</span>.</p>
+            <div class="links">
+                <a href="https://github.com/leonardobossolanidev" target="_blank" class="btn-git">GitHub</a>
+                <a href="https://www.linkedin.com/in/leonardobossolanidev/" target="_blank" class="btn-linkedin">LinkedIn</a>
+            </div>
+        </div>
+    </section>
+    <section class="sobre" id="sobre">
+        <div class="container">
+            <h2>Sobre mim</h2>
+            <p>Meu nome é Leonardo Bossolani, sou um desenvolvedor back-end e analista de dados apaixonado por tecnologia e inovação.</p>
+            <p>Atualmente estudando <span class="destaque">Python</span>, <span class="destaque">C#</span>, <span class="destaque">.NET</span> e <span class="destaque">SQL</span>.</p>
+            <div class="imagens">
+                <img src="python image.png" alt="Python">
+                <img src="github image for src.png" alt="GitHub">
+            </div>
+        </div>
+    </section>
+    <section class="projetos" id="projetos">
+        <div class="container">
+            <h2>Projetos em Destaque</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>API de Dados</h3>
+                    <p>API RESTful desenvolvida em .NET para análise de dados em tempo real.</p>
+                    <a href="https://github.com/leonardobossolanidev" target="_blank">Ver no GitHub</a>
+                </div>
+                <div class="card">
+                    <h3>Dashboard Python</h3>
+                    <p>Dashboard interativo para visualização de dados usando Python e Plotly.</p>
+                    <a href="https://github.com/leonardobossolanidev" target="_blank">Ver no GitHub</a>
+                </div>
+                <div class="card">
+                    <h3>Portfólio Web</h3>
+                    <p>Este site, feito com HTML, CSS e JavaScript, totalmente responsivo e moderno.</p>
+                    <a href="#" onclick="alert('Você já está aqui!')">Ver Projeto</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contato" id="contato">
+        <div class="container">
+            <h2>Contato</h2>
+            <form id="formContato">
+                <input type="text" id="nome" placeholder="Seu nome" required>
+                <input type="email" id="email" placeholder="Seu e-mail" required>
+                <textarea id="mensagem" placeholder="Sua mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+            <div id="mensagemEnviada" class="mensagem-oculta">Mensagem enviada! Obrigado pelo contato 🚀</div>
+            <div class="info">
+                <p>Email: bossolani.leonardo@gmail.com</p>
+                <p>Telefone: (11) 95083-3253</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>Desenvolvido por Leonardo Bossolani &copy; 2025</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
