@@ -1,89 +1,183 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>  
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifolio Leonardo Bossolani</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap" rel="stylesheet">
-</head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portifolio Leonardo Bossolani</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap" rel="stylesheet">
+        <!-- Vue.js CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+        <!-- Animate.css CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <!-- FontAwesome CDN para ícones das skills -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+        <!-- EmailJS CDN para envio de e-mails -->
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+        <script>
+            (function(){
+                emailjs.init('SEU_USER_ID_AQUI'); // Substitua pelo seu User ID do EmailJS
+            })();
+        </script>
+    </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Leonardo Bossolani</h1>
-            <h2>Desenvolvedor Back-end & Analista de Dados</h2>
-            <nav>
-                <a href="#sobre">Sobre</a>
-                <a href="#projetos">Projetos</a>
-                <a href="#contato">Contato</a>
-            </nav>
-        </div>
-    </header>
-    <section class="hero">
-        <div class="container">
-            <h1>Bem-vindo ao meu portfólio!</h1>
-            <p>Desenvolvendo habilidades de <span class="destaque">FullStack</span> com foco em <span class="destaque">Back-end</span>.</p>
-            <div class="links">
-                <a href="https://github.com/leonardobossolanidev" target="_blank" class="btn-git">GitHub</a>
-                <a href="https://www.linkedin.com/in/leonardobossolanidev/" target="_blank" class="btn-linkedin">LinkedIn</a>
+    <div id="app">
+        <header>
+            <div class="container">
+                <img src="image.png" alt="Foto de Perfil Leonardo Bossolani" class="profile-pic animate__animated animate__fadeInDown">
+                <h1 class="animate__animated animate__fadeIn">Leonardo Bossolani</h1>
+                <h2 class="animate__animated animate__fadeIn">Desenvolvedor Back-end & Analista de Dados</h2>
+                <nav>
+                    <a href="#sobre">Sobre</a>
+                    <a href="#projetos">Projetos</a>
+                    <a href="#contato">Contato</a>
+                </nav>
             </div>
-        </div>
-    </section>
-    <section class="sobre" id="sobre">
-        <div class="container">
-            <h2>Sobre mim</h2>
-            <p>Meu nome é Leonardo Bossolani, sou um desenvolvedor back-end e analista de dados apaixonado por tecnologia e inovação.</p>
-            <p>Atualmente estudando <span class="destaque">Python</span>, <span class="destaque">C#</span>, <span class="destaque">.NET</span> e <span class="destaque">SQL</span>.</p>
-            <div class="imagens">
-                <img src="python image.png" alt="Python">
-                <img src="github image for src.png" alt="GitHub">
-            </div>
-        </div>
-    </section>
-    <section class="projetos" id="projetos">
-        <div class="container">
-            <h2>Projetos em Destaque</h2>
-            <div class="cards">
-                <div class="card">
-                    <h3>API de Dados</h3>
-                    <p>API RESTful desenvolvida em .NET para análise de dados em tempo real.</p>
-                    <a href="https://github.com/leonardobossolanidev" target="_blank">Ver no GitHub</a>
-                </div>
-                <div class="card">
-                    <h3>Dashboard Python</h3>
-                    <p>Dashboard interativo para visualização de dados usando Python e Plotly.</p>
-                    <a href="https://github.com/leonardobossolanidev" target="_blank">Ver no GitHub</a>
-                </div>
-                <div class="card">
-                    <h3>Portfólio Web</h3>
-                    <p>Este site, feito com HTML, CSS e JavaScript, totalmente responsivo e moderno.</p>
-                    <a href="#" onclick="alert('Você já está aqui!')">Ver Projeto</a>
+        </header>
+        <section class="hero animate__animated animate__fadeInUp">
+            <div class="container">
+                <h1>Bem-vindo ao meu portfólio!</h1>
+                <p>Desenvolvendo habilidades de <span class="destaque">FullStack</span> com foco em <span class="destaque">Back-end</span>.</p>
+                <div class="links">
+                    <a href="https://github.com/leonardobossolanidev" target="_blank" class="btn-git">GitHub</a>
+                    <a href="https://www.linkedin.com/in/leonardobossolanidev/" target="_blank" class="btn-linkedin">LinkedIn</a>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="contato" id="contato">
-        <div class="container">
-            <h2>Contato</h2>
-            <form id="formContato">
-                <input type="text" id="nome" placeholder="Seu nome" required>
-                <input type="email" id="email" placeholder="Seu e-mail" required>
-                <textarea id="mensagem" placeholder="Sua mensagem" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-            <div id="mensagemEnviada" class="mensagem-oculta">Mensagem enviada! Obrigado pelo contato 🚀</div>
-            <div class="info">
-                <p>Email: bossolani.leonardo@gmail.com</p>
-                <p>Telefone: (11) 95083-3253</p>
+        </section>
+        <section class="resumo animate__animated animate__fadeInDown" id="resumo">
+            <div class="container">
+                <h2><i class="fas fa-user-tie section-icon"></i> Resumo Profissional</h2>
+                <p class="resumo-texto">
+                    Desenvolvedor Back-End em formação, com foco em APIs RESTful escaláveis, seguras e performáticas, utilizando <strong>Python</strong>, <strong>Java</strong> e boas práticas de arquitetura de microsserviços. Busco uma oportunidade para aplicar meus conhecimentos em projetos reais, aprender com equipes experientes e contribuir com soluções eficientes, com atenção à qualidade, testes e documentação.
+                </p>
+                <a href="curriculo leonardo bossolani.R.pdf" class="btn-curriculo" target="_blank"><i class="fas fa-file-pdf"></i> Baixar Currículo</a>
             </div>
-        </div>
-    </section>
-    <footer>
-        <div class="container">
-            <p>Desenvolvido por Leonardo Bossolani &copy; 2025</p>
-        </div>
-    </footer>
+        </section>
+        <!-- Seção Experiência -->
+        <section class="experiencia animate__animated animate__fadeInUp" id="experiencia">
+            <div class="container">
+                <h2><i class="fas fa-briefcase section-icon"></i> Experiência</h2>
+                <div class="experiencia-lista">
+                    <div class="experiencia-item">
+                        <h3>CSEG <span class="experiencia-cargo">(Freelancer Front-End)</span></h3>
+                        <span class="experiencia-periodo">2024</span>
+                        <p>
+                            Atuei como freelancer de front-end na CSEG, desenvolvendo interfaces modernas e responsivas utilizando <strong>Vue.js</strong> e <strong>JavaScript</strong>. Participei da criação de componentes reutilizáveis, integração com APIs e aprimoramento da experiência do usuário em projetos web.
+                        </p>
+                        <div class="badges">
+                            <span class="badge badge-frontend"><i class="fab fa-vuejs"></i> Vue.js</span>
+                            <span class="badge badge-js"><i class="fab fa-js"></i> JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="skills animate__animated animate__fadeInUp" id="skills">
+            <div class="container">
+                <h2><i class="fas fa-tools section-icon"></i> Skills</h2>
+                <div class="skills-list">
+                    <div class="skill-bar" v-for="skill in skills" :key="skill.nome">
+                        <div class="skill-info">
+                            <span class="skill-icon skill-icon-big" v-if="skill.icone"><i :class="skill.icone"></i></span>
+                            <span class="skill-nome">{{ skill.nome }}</span>
+                            <span class="skill-porcento">{{ skill.porcento }}%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-inner animate__animated animate__slideInLeft" :style="{width: skill.porcento + '%', background: skill.cor}"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sobre animate__animated animate__fadeIn" id="sobre">
+            <div class="container">
+                <h2><i class="fas fa-user section-icon"></i> Sobre mim</h2>
+                <p>Meu nome é Leonardo Bossolani, sou um <strong>desenvolvedor back-end</strong> e <strong>analista de dados</strong> apaixonado por tecnologia e inovação.</p>
+                <p>Meu foco é atuar como <strong>dev back-end</strong> e <strong>analista de dados</strong>. Estudo front-end apenas por hobby e para ampliar minha visão de tecnologia.</p>
+                <p>Atualmente estudando <span class="destaque">Python</span>, <span class="destaque">C#</span>, <span class="destaque">.NET</span> e <span class="destaque">SQL</span>.</p>
+                <div class="badges">
+                    <span class="badge badge-backend"><i class="fas fa-server"></i> Back-end</span>
+                    <span class="badge badge-dados"><i class="fas fa-database"></i> Dados</span>
+                    <span class="badge badge-hobby"><i class="fas fa-laptop-code"></i> Front-end (hobby)</span>
+                </div>
+            </div>
+        </section>
+        <section class="projetos animate__animated animate__fadeInUp" id="projetos">
+            <div class="container">
+                <h2><i class="fas fa-code section-icon"></i> Projetos em Destaque</h2>
+                <div class="cards">
+                    <div class="card animate__animated animate__fadeInUp" v-for="projeto in projetos" :key="projeto.titulo">
+                        <h3>{{ projeto.titulo }}</h3>
+                        <p>{{ projeto.descricao }}</p>
+                        <a :href="projeto.link" target="_blank">Ver no GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contato animate__animated animate__fadeIn" id="contato">
+            <div class="container">
+                <h2><i class="fas fa-envelope section-icon"></i> Contato</h2>
+                <form id="formContato" @submit.prevent="enviarMensagem">
+                    <input type="text" id="nome" placeholder="Nome Completo"  v-model="form.nome" required>
+                    <input type="email" id="email" placeholder="E-mail" v-model="form.email" required>
+                    <textarea id="mensagem" placeholder="Mensagem" v-model="form.mensagem" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+                <div id="mensagemEnviada" class="mensagem-oculta" v-if="mensagemEnviada">Mensagem enviada! Obrigado pelo contato 🚀</div>
+                <div class="info">
+                    <p>Email: bossolani.leonardo@gmail.com</p>
+                    <p>Telefone: (11) 95083-3253</p>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <p>Desenvolvido por Leonardo Bossolani &copy; 2025</p>
+            </div>
+        </footer>
+    </div>
     <script src="js/script.js"></script>
+    <script>
+    new Vue({
+        el: '#app',
+        data: {
+            skills: [
+                { nome: 'Python', porcento: 70, cor: '#306998', icone: 'fab fa-python' },
+                { nome: 'C#', porcento: 50, cor: '#68217A', icone: 'fab fa-microsoft' },
+                { nome: '.NET', porcento: 40, cor: '#512BD4', icone: 'fab fa-microsoft' },
+                { nome: 'SQL', porcento: 70, cor: '#00758F', icone: 'fas fa-database' },
+                { nome: 'JavaScript', porcento: 65, cor: '#FFD600', icone: 'fab fa-js' },
+                { nome: 'HTML/CSS', porcento: 70, cor: '#E44D26', icone: 'fab fa-html5' }
+            ],
+            projetos: [
+                { titulo: 'Delivery API v2', descricao: 'API robusta para gerenciamento de entregas, desenvolvida em .NET e SQL Server.', link: 'https://github.com/leonardobossolanidev/delivery-api-v2' },
+                { titulo: 'ChatBot Python', descricao: 'Chatbot inteligente criado em Python para automação de conversas e atendimento.', link: 'https://github.com/leonardobossolanidev/ChatBotPython' },
+                { titulo: 'Vendas Já', descricao: 'Sistema completo para gestão de vendas, clientes e produtos.', link: 'https://github.com/leonardobossolanidev/Vendas-Ja' }
+            ],
+            form: { nome: '', email: '', mensagem: '' },
+            mensagemEnviada: false
+        },
+        methods: {
+            enviarMensagem() {
+                const serviceID = 'SEU_SERVICE_ID_AQUI'; // Substitua pelo seu Service ID do EmailJS
+                const templateID = 'SEU_TEMPLATE_ID_AQUI'; // Substitua pelo seu Template ID do EmailJS
+                const templateParams = {
+                    from_name: this.form.nome,
+                    from_email: this.form.email,
+                    message: this.form.mensagem
+                };
+                emailjs.send(serviceID, templateID, templateParams)
+                    .then(() => {
+                        this.mensagemEnviada = true;
+                        this.form = { nome: '', email: '', mensagem: '' };
+                        setTimeout(() => this.mensagemEnviada = false, 3000);
+                    }, (error) => {
+                        alert('Erro ao enviar mensagem. Tente novamente.');
+                    });
+            }
+        }
+    });
+    </script>
 </body>
 </html>
